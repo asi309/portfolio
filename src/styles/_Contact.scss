@@ -1,0 +1,116 @@
+@import 'App';
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2 * $large-size 0 2 * $large-size 0;
+}
+
+.contact__title {
+  font-size: 2 * $default-size;
+  margin-bottom: $default-size;
+}
+
+.contact__subtitle {
+  font-size: $large-size;
+  margin-bottom: 2 * $default-size;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: $large-size;
+  width: 30 * $large-size;
+
+  label {
+    font-size: $default-size;
+    line-height: $large-size;
+    margin-bottom: $default-size / 1.6;
+  }
+
+  input,
+  textarea {
+    background-color: theme();
+    border-radius: $small-size / 3;
+    border: 1px solid $black;
+    font-size: $default-size;
+    height: 2 * $large-size;
+    outline: $purple none medium;
+    padding: $default-size / 3 $default-size;
+
+    &:focus {
+      border: 2px solid $purple;
+    }
+
+    &::selection {
+      background-color: $purple;
+      color: $white;
+    }
+  }
+
+  .contact-form__headers {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $large-size;
+    width: 100%;
+  }
+
+  .input__name {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    width: 49%;
+
+    &:focus-within {
+      label {
+        color: $purple;
+      }
+    }
+  }
+
+  .input__email {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+
+    &:focus-within {
+      label {
+        color: $purple;
+      }
+    }
+  }
+
+  .contact-form__message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $large-size;
+    width: 100%;
+
+    &:focus-within {
+      label {
+        color: $purple;
+      }
+    }
+  }
+
+  .input__message {
+    height: 10 * $large-size;
+    resize: none;
+  }
+
+  #submit {
+    @extend button;
+    background-color: $purple;
+    border: 1px solid $purple;
+    color: $white;
+    font-size: $default-size;
+    line-height: $large-size;
+    padding: $default-size $large-size;
+
+    &:hover {
+      color: $purple;
+    }
+  }
+}

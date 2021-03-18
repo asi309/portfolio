@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import { UserContext } from '../user-context';
 import Theme from './Theme';
 
-import './Header.css'
+const Header = () => {
+  const { themePref, setThemePref, lightStyle, darkStyle } = useContext(
+    UserContext
+  );
 
-const Header = ({ theme, isChecked, toggleTheme }) => {
+  const themeHandler = () => {
+    if (themePref === 'dark') {
+      setThemePref('light');
+    } else {
+      setThemePref('dark');
+    }
+  };
   return (
-    <header>
-      <h1>Asidipta's Portfolio</h1>
-      <Theme theme={theme} isChecked={isChecked} toggleTheme={toggleTheme} />
+    <header style={themePref === 'dark' ? darkStyle : lightStyle}>
+      <strong className="branding">Asidipta Chaudhuri</strong>
+      <Theme isChecked={themePref === 'dark'} toggleTheme={themeHandler} />
     </header>
   );
 };

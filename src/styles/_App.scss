@@ -1,0 +1,35 @@
+html,
+body,
+#root {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  min-width: 100%;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.light-mode {
+  background-color: $main-background-light-theme;
+  color: $text-color-light-theme;
+}
+
+.dark-mode {
+  background-color: $main-background-dark-theme;
+  color: $text-color-dark-theme;
+}
+
+button {
+  border-radius: $small-size / 2;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}

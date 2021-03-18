@@ -1,0 +1,28 @@
+footer {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: $large-size 3 * $large-size;
+  }
+
+  .footer__link {
+    margin-right: $default-size;
+  }
+
+  .footer__link--icons {
+    height: 1.6 * $large-size;
+    width: 1.6 * $large-size;
+    fill: $purple;
+  }
+
+  .copyright-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .copyright__text {
+    color: $purple;
+    font-size: $default-size;
+  }
+}

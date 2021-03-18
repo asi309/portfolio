@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .branding {
+    color: $highlight-text-color;
+    font-size: $default-size;
+    margin: $default-size $large-size $default-size $small-size;
+    padding-left: $small-size;
+  }
+
+  #toggler {
+    margin-right: $large-size;
+    margin-left: $small-size;
+    padding-right: $default-size;
+  }
+}

@@ -1,0 +1,46 @@
+@import 'App';
+
+.banner-container {
+  background-color: $purple;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5 * $large-size 0 2.5 * $large-size 0;
+
+  .portfolio__title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: $large-size;
+
+    h1, p {
+      margin: $default-size / 2 0;
+    }
+  }
+
+  .portfolio__title {
+    font-size: 2 * $large-size;
+  }
+
+  p {
+    font-size: $large-size;
+    line-height: 2 * $default-size;
+    text-align: center;
+    margin-bottom: 2 * $large-size;
+  }
+
+  .button {
+    @extend button;
+    background-color: $white;
+    border: 1px solid $white;
+    color: $black;
+    font-size: $large-size;
+    padding: $default-size 1.5 * $large-size;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

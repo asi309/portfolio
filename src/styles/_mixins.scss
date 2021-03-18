@@ -1,0 +1,7 @@
+@function theme() {
+  @if (color == $text-color-dark-theme) {
+    @return lighten($main-background-dark-theme, 30%);
+  } @else {
+    @return $main-background-light-theme;
+  }
+}

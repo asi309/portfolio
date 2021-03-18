@@ -1,8 +1,6 @@
 import React from 'react';
 
-import './Theme.css';
-
-const Theme = ({ theme, isChecked, toggleTheme }) => {
+const Theme = ({ isChecked, toggleTheme }) => {
   return (
     <div id="toggler">
       <label className="theme-changer">
