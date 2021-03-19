@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 
 import { UserContext } from '../user-context';
+import api from '../service/api';
 
 export default function Contact() {
   const { themePref, lightStyle, darkStyle } = useContext(UserContext);
@@ -12,6 +13,19 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+
+    try {
+      if (name !== '' && email !== '' && message !== '') {
+        const response = await api.post('/submit', { name, email, message });
+        console.log(response);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div
@@ -54,7 +68,9 @@ export default function Contact() {
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
         </div>
-        <button id="submit">Submit</button>
+        <button id="submit" onClick={submitHandler}>
+          Submit
+        </button>
       </form>
     </div>
   );
