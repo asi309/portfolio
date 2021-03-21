@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2 * $large-size 0 2 * $large-size 0;
+  padding: 3 * $large-size 0 3 * $large-size 0;
 }
 
 .contact__title {
@@ -37,9 +37,9 @@
     border: 1px solid $black;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: $default-size;
-    height: 2 * $large-size;
+    height: 3 * $large-size;
     outline: $purple none medium;
-    padding: $default-size / 3 $default-size;
+    padding: $default-size $default-size;
 
     &:focus {
       border: 2px solid $purple;
@@ -90,7 +90,8 @@
   .contact-form__message {
     display: flex;
     flex-direction: column;
-    margin-bottom: $large-size;
+    margin-top: $default-size;
+    margin-bottom: 1.5 * $large-size;
     width: 100%;
 
     &:focus-within {
@@ -101,7 +102,7 @@
   }
 
   .input__message {
-    height: 10 * $large-size;
+    height: 12 * $large-size;
     resize: none;
   }
 

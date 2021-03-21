@@ -25,8 +25,8 @@ export default function About() {
             do, and I am looking for opportunities in web development. If you
             are upto some project and need collaboration, just let me know!
           </p>
-          <p className="about__tech">
-            Technologies I use:
+          <div className="about__tech">
+            <span>Technologies I use:</span>
             <ul className="about__tech--list">
               <li>
                 <img
@@ -77,7 +77,7 @@ export default function About() {
                 <span>Bootstrap</span>
               </li>
             </ul>
-          </p>
+          </div>
         </div>
         <img className="about__image" src={reactIcon} alt="profile" />
       </div>

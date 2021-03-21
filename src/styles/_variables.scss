@@ -8,12 +8,12 @@ $black: #000000;
 $purple: #764abc;
 
 //  main
-$main-background-dark-theme: #1F1F21;
+$main-background-dark-theme: #1f1f21;
 $main-background-light-theme: $white;
 $accent-color: #3c7aec;
 $highlight-text-color: $purple;
 $slider-color-dark: $blue;
-$slider-color-light: #FDF6FF;
+$slider-color-light: #fdf6ff;
 $text-color-light-theme: #161517;
 $text-color-dark-theme: $off-white;
 
@@ -21,3 +21,6 @@ $text-color-dark-theme: $off-white;
 $default-size: 1.6rem;
 $large-size: 2rem;
 $small-size: 1.2rem;
+
+//breakpoints
+$phone-screen: 640px;

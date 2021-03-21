@@ -20,7 +20,7 @@
 .about__body-container {
   display: flex;
   flex-direction: column;
-  max-width: 40%;
+  width: 50%;
   padding-left: 10%;
   padding-top: $default-size;
   margin-right: 10%;
@@ -52,6 +52,10 @@
   li {
     display: flex;
     margin-bottom: $default-size;
+
+    &:hover {
+      color: $purple;
+    }
   }
 
   li:nth-of-type(2n + 1) {

@@ -1,8 +1,15 @@
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
   .footer-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: $large-size 3 * $large-size;
+    padding-bottom: $default-size;
+    width: 90%;
   }
 
   .footer__link {
@@ -15,14 +22,22 @@ footer {
     fill: $purple;
   }
 
-  .copyright-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
   .copyright__text {
     color: $purple;
     font-size: $default-size;
+  }
+
+  @media screen and (max-width: $phone-screen) {
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: $default-size;
+    }
+
+    .footer__links {
+      margin-bottom: $large-size;
+    }
   }
 }

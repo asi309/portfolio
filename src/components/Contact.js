@@ -20,7 +20,6 @@ export default function Contact() {
     try {
       if (name !== '' && email !== '' && message !== '') {
         const response = await api.post('/submit', { name, email, message });
-        console.log(response);
       }
     } catch (error) {
       console.log(error);
