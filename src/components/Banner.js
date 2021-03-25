@@ -8,8 +8,8 @@ export default function Banner() {
         <h1 className="portfolio__title">Asidipta Chaudhuri</h1>
       </div>
       <p className="portfolio__subtitle">
-        I am a Web Developer out of Kolkata. I specialize in building beautiful
-        and functional web applications.
+        I am a Web Developer out of Kolkata. I specialize in building functional
+        and attractive web applications.
         <br />
         Scroll down to find out more about me.
       </p>
