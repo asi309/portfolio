@@ -1,5 +1,6 @@
 header {
   display: flex;
+  height: 3 * $large-size;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -11,9 +12,33 @@ header {
     padding-left: $small-size;
   }
 
-  #toggler {
-    margin-right: $large-size;
-    margin-left: $small-size;
-    padding-right: $default-size;
+  nav {
+    align-self: center;
+    position: absolute;
+    right: 100px;
+
+    ul {
+      list-style: none;
+
+      li a {
+        text-decoration: none;
+      }
+
+      .button {
+        background-color: transparent;
+        border: 1px solid $purple;
+        border-radius: 5px;
+        color: $purple;
+        cursor: pointer;
+        font-size: $default-size;
+        padding: $small-size / 1.2 1.5 * $small-size;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $purple;
+          color: $white;
+        }
+      }
+    }
   }
 }

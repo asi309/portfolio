@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import { UserContext } from '../user-context';
-import api from '../service/api';
+// import api from '../service/api';
 import attachmentIcon from '../assets/attachment.svg';
 import emailIcon from '../assets/email.svg';
 import githubIcon from '../assets/github.svg';
@@ -11,21 +11,21 @@ import linkedinIcon from '../assets/linkedin.svg';
 export default function Footer() {
   const { themePref, lightStyle, darkStyle } = useContext(UserContext);
 
-  const resumeHandler = async (e) => {
-    e.preventDefault();
+  // const resumeHandler = async (e) => {
+  //   e.preventDefault();
 
-    try {
-      const response = await api.get('/resume', { responseType: 'blob' });
+  //   try {
+  //     const response = await api.get('/resume', { responseType: 'blob' });
 
-      const file = new Blob([response.data], { type: 'application/pdf' });
-      const fileURL = URL.createObjectURL(file);
+  //     const file = new Blob([response.data], { type: 'application/pdf' });
+  //     const fileURL = URL.createObjectURL(file);
 
-      const newWindow = window.open();
-      newWindow.location.href = fileURL;
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //     const newWindow = window.open();
+  //     newWindow.location.href = fileURL;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   return (
     <footer style={themePref === 'dark' ? darkStyle : lightStyle}>
       <div className="footer-container">
@@ -80,8 +80,7 @@ export default function Footer() {
           </a>
           <a
             className="footer__link"
-            href="/resume"
-            onClick={resumeHandler}
+            href="https://portfolio-asi309.s3.amazonaws.com/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
