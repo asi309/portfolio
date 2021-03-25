@@ -22,7 +22,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: $large-size;
-  width: 30 * $large-size;
+  width: 60%;
+  max-width: 30 * $large-size;
 
   label {
     font-size: $default-size;
@@ -133,5 +134,19 @@
     color: $purple;
     font-size: $large-size;
     margin-top: 1.5 * $large-size;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact-form__headers {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+
+    .input__name, .input__email {
+      margin: 0;
+      margin-bottom: $large-size;
+      width: 100%;
+    }
   }
 }

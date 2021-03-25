@@ -75,3 +75,30 @@
   height: 15 * $large-size;
   width: 15 * $large-size;
 }
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    align-items: center;
+  }
+  
+  .about__title {
+    align-self: center;
+    margin-left: 0;
+  }
+  
+  .about__body-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .about__image {
+    align-self: center;
+  }
+
+  .about__body-container {
+    align-self: center;
+    padding-left: 0;
+    margin: 0;
+    width: 60%;
+  }
+}
