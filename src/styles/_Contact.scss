@@ -52,7 +52,7 @@
   }
 
   textarea {
-    padding: $default-size; 
+    padding: $default-size;
   }
 
   .contact-form__headers {
@@ -118,5 +118,20 @@
     &:hover {
       color: $purple;
     }
+  }
+
+  .alert {
+    display: flex;
+    height: 2 * $large-size;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    // background-color: lighten(
+    //   $color: $main-background-dark-theme,
+    //   $amount: 10%
+    // );
+    color: $purple;
+    font-size: $large-size;
+    margin-top: 1.5 * $large-size;
   }
 }

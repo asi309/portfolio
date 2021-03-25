@@ -1,13 +1,19 @@
 import React from 'react';
+import Toggle from 'react-toggle';
+
+import ToggleChecked from '../assets/ToggleChecked';
+import ToggleUnchecked from '../assets/ToggleUnchecked';
+
+import 'react-toggle/style.css';
 
 const Theme = ({ isChecked, toggleTheme }) => {
   return (
-    <div id="toggler">
-      <label className="theme-changer">
-        <input type="checkbox" checked={isChecked} onChange={toggleTheme} />
-        <span className="slider"></span>
-      </label>
-    </div>
+    <Toggle
+      className="theme-changer"
+      defaultChecked={isChecked}
+      icons={{ checked: <ToggleChecked />, unchecked: <ToggleUnchecked /> }}
+      onChange={toggleTheme}
+    />
   );
 };
 

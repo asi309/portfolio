@@ -13,6 +13,7 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [sysMessage, setSysMessage] = useState('');
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -20,8 +21,24 @@ export default function Contact() {
     try {
       if (name !== '' && email !== '' && message !== '') {
         const response = await api.post('/submit', { name, email, message });
+
+        if (response.status === 200) {
+          setSysMessage(response.data.message);
+          setTimeout(() => {
+            setSysMessage('');
+          }, 2000);
+        } else {
+          setSysMessage('Could not send message. Please try later.');
+          setTimeout(() => {
+            setSysMessage('');
+          }, 2000);
+        }
       }
     } catch (error) {
+      setSysMessage('Could not send message. Please try later.');
+      setTimeout(() => {
+        setSysMessage('');
+      }, 2000);
       console.log(error);
     }
   };
@@ -70,6 +87,7 @@ export default function Contact() {
         <button id="submit" onClick={submitHandler}>
           Submit
         </button>
+        {sysMessage && <div className="alert">{sysMessage}</div>}
       </form>
     </div>
   );

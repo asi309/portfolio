@@ -5,6 +5,7 @@ import About from './components/About';
 import Header from './components/Header';
 import Banner from './components/Banner';
 import Contact from './components/Contact';
+import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 import './styles/base.scss';
@@ -43,6 +44,7 @@ function App() {
         <Header />
         <Banner />
         <About />
+        <Projects />
         <Contact />
         <Footer />
       </div>
